@@ -98,15 +98,15 @@ body {
   }
   &--github::after {
     @extend %after-image;
-    background-image: url(/img/github-dark-logo.png);
+    background-image: url(img/github-dark-logo.png);
   }
   &--telegram::after {
     @extend %after-image;
-    background-image: url(/img/telegram-logo.png);
+    background-image: url(img/telegram-logo.png);
   }
   &--codewars::after {
     @extend %after-image;
-    background-image: url(/img/codewars-logo.svg);
+    background-image: url(img/codewars-logo.svg);
   }
 }
 
