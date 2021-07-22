@@ -1,0 +1,253 @@
+$background-color: #FFB57F;
+
+%progress-bar-params {
+  background: $background-color !important;
+  position: absolute;
+  left: 0;
+  top: 1.5%;
+  margin: 0;
+  height: 5% !important;
+}
+
+%after-image {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  left: -1.4em;
+  top: 0.3em;
+  width: 1em;
+  height: 1em;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.cv-container {
+  margin: 2rem auto .5rem auto;
+  border: 5px solid #000;
+  position: relative;
+  padding: 1.5rem;
+  width: 55vw;
+  border-radius: 5%;
+}
+
+.background-img {
+    position: absolute;
+    top: -4%;
+    left: 0;
+    z-index: -1;
+}
+
+.cv-title {
+  display: flex;
+  &__main {
+    @extend %flex-column;
+    margin-right: .5em;
+    flex: 2 1 auto;
+  }
+
+  &__name {
+    font-size: 58pt;
+    margin: 0;
+  }
+
+  &__career {
+    font-size: 32pt;
+    margin: 0;
+  }
+
+  &__aside {
+    @extend %flex-column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+  }
+
+  &__link-container {
+    margin-top: 0.8em;
+    @extend %flex-column;
+  }
+
+  &__profile-img {
+    border-radius: 50%;
+    width: 12em;
+    height: 12em;
+  }
+}
+
+.link {
+  text-decoration: none;
+  display: block;
+  color: #000;
+  margin-left: 1em;
+  position: relative;
+  width: inherit;
+  &:hover {
+  color: #FF1F00;
+  }
+  &--footer {
+    margin: 0;
+    display: inline;
+  }
+  &--github::after {
+    @extend %after-image;
+    background-image: url(/img/github-dark-logo.png);
+  }
+  &--telegram::after {
+    @extend %after-image;
+    background-image: url(/img/telegram-logo.png);
+  }
+  &--codewars::after {
+    @extend %after-image;
+    background-image: url(/img/codewars-logo.svg);
+  }
+}
+
+.cv-main {
+  @extend %flex-column;
+  margin-left: 4%;
+  position: relative;
+}
+
+.cv-line {
+  position: absolute;
+  height: 100%;
+  left: -3.3%;
+  width: 4px;
+  background: #000;
+}
+
+.cv-article {
+  @extend %flex-column;
+  &__title {
+    font-size: 26pt;
+    margin-bottom: 0.3em;
+    position: relative;
+  }
+  &__title::before {
+    position: absolute;
+    content: "";
+    width: .5em;
+    height: .5em;
+    top: 35%;
+    left: -4%;
+    background-color: $background-color;
+    border-radius: 50%;
+  }
+  &__section {
+    display: block;
+    margin: 0;
+    font-size: 20pt;
+  }
+  &__skill {
+    width: 6em;
+    text-align: right;
+  }
+  &__section--skills-section {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 2%;
+  }
+  &__text {
+    margin: auto 5% auto 0;
+  }
+  &__section--code-examples {
+    display: flex;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+  height: 9%;
+  background: #000;
+  &-container {
+    position: relative;
+    height: 100%;
+  }
+  &--js {
+    @extend %progress-bar-params;
+    width: calc(100% / 3);
+  }
+  &--html {
+    @extend %progress-bar-params;
+    width: calc(100% / 1.7);
+  }
+  &--css {
+    @extend %progress-bar-params;
+    width: calc(100% / 1.5);
+  }
+}
+
+.footer {
+  margin: auto;
+  position: relative;
+  display: flex;
+  width: 60vw;
+  justify-content: space-between;
+  &__info {
+    width: 26%;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  &__info-text {
+    width: 100%;
+    text-align: end;
+  }
+  &__rs-info {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__rs-logo {
+    background-size: cover;
+    margin-left: 0;
+  }
+  &__rs-link {
+    width: 70%;
+    height: 70%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cv-title {
+    position: relative;
+    &__career {
+      width: 50%;
+    }
+    &__aside {
+      position: absolute;
+      right: 0;
+      top: 30%;
+    }
+  }
+  .background-img {
+    position: absolute;
+    top: -4%;
+    left: 20%;
+    z-index: -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cv-title {
+    &__link-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
