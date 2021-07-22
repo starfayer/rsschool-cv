@@ -96,15 +96,15 @@ body {
 }
 
 .link--github::after {
-  background-image: url(/img/github-dark-logo.png);
+  background-image: url(img/github-dark-logo.png);
 }
 
 .link--telegram::after {
-  background-image: url(/img/telegram-logo.png);
+  background-image: url(img/telegram-logo.png);
 }
 
 .link--codewars::after {
-  background-image: url(/img/codewars-logo.svg);
+  background-image: url(img/codewars-logo.svg);
 }
 
 .cv-main {
