@@ -191,7 +191,7 @@ body {
   margin: auto;
   position: relative;
   display: flex;
-  width: 60vw;
+  width: 60vw; 
   justify-content: space-between;
 }
 
