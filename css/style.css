@@ -67,6 +67,10 @@ body {
   width: 40%;
 }
 
+.cv-title__list {
+  list-style-type: none;
+}
+
 .cv-title__link-container {
   margin-top: 0.8em;
 }
