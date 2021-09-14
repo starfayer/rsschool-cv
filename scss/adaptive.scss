@@ -1,0 +1,84 @@
+@media (max-width: 1200px) {
+  .cv-title {
+    position: relative;
+    &__profile-img {
+      width: 10em;
+      height: 10em;
+    }
+    &__name {
+      font-size: 48pt;
+    }
+    &__career {
+      width: 50%;
+    }
+    &__aside {
+      position: absolute;
+      right: 0;
+      top: 30%;
+    }
+  }
+  .cv-article {
+    &__title {
+      font-size: 23pt;
+    }
+    &__section {
+      font-size: 18pt;
+    }
+  }
+  .footer {
+    &__info {
+      width: 20%;
+      justify-content: space-around;
+    }
+  }
+  .link {
+    &--footer {
+      font-size: 1em;
+    }
+  }
+  .hide {
+    display: none;
+  }
+  .background-img {
+    position: absolute;
+    top: -4%;
+    left: 20%;
+    z-index: -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .cv-title {
+    &__profile-img {
+      width: 80%;
+      height: 80%;
+    }
+    &__link-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    &__name {
+      font-size: 38pt;
+    }
+    &__career {
+      font-size: 26pt;
+    }
+  }
+  .link > li {
+    font-size: 15pt;
+  }
+  .cv-article {
+    &__title {
+      margin-left: 2%;
+      font-size: 26pt;
+    }
+    &__title::before {
+      left: -7%;
+    }
+    &__section {
+      font-size: 15pt;
+    }
+  }
+}

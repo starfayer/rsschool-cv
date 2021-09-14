@@ -80,13 +80,12 @@ body {
     width: 12em;
     height: 12em;
   }
-
-  &__list {
-    list-style-type: none;
-    padding: 0;
-  }
 }
 
+.list {
+  list-style-type: none;
+  padding: 0;
+}
 .link {
   text-decoration: none;
   display: block;
@@ -102,7 +101,6 @@ body {
   }
   &--footer {
     margin: 0;
-    display: inline;
   }
   &--github::after {
     @extend %after-image;
@@ -228,33 +226,4 @@ body {
   }
 }
 
-@media (max-width: 1200px) {
-  .cv-title {
-    position: relative;
-    &__career {
-      width: 50%;
-    }
-    &__aside {
-      position: absolute;
-      right: 0;
-      top: 30%;
-    }
-  }
-  .background-img {
-    position: absolute;
-    top: -4%;
-    left: 20%;
-    z-index: -1;
-    width: 100%;
-  }
-}
-
-@media (max-width: 800px) {
-  .cv-title {
-    &__link-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-  }
-}
+@import "adaptive.scss";
